@@ -29,8 +29,16 @@ header {
 
 .case {
     width: 200px;
+    border: 100px blue;
+    padding: 5px;
+    margin: 5px;
 }
 
 .text {
     text-align: center;
+}
+
+button {
+    border: none;
+    background: none;
 }
