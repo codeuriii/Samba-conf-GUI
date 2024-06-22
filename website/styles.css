@@ -58,3 +58,8 @@ header {
     align-items: center;
     margin-bottom: 10px;
 }
+
+main {
+    display: flex;
+    flex-direction: row;
+}
