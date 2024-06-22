@@ -29,16 +29,32 @@ header {
 
 .case {
     width: 200px;
-    border: 100px blue;
+    border: 5px solid rgb(19, 144, 211);
     padding: 5px;
     margin: 5px;
+    border-radius: 10px;
 }
 
 .text {
     text-align: center;
 }
 
-button {
-    border: none;
+.add-server {
+    align-items: center;
+    display: flex;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-server button {
+    border: 5px solid grey;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
     background: none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
 }
