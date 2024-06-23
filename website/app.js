@@ -11,7 +11,7 @@ function addServer() {
     divCase.textContent = i
     i++
     
-    main.insertBefore(divCase, main.firstChild)
+    main.insertBefore(divCase, addServerBtn.parentElement)
 }
 
 
