@@ -34,6 +34,7 @@ function addServer() {
     addUserBtn.classList.add("server-btn")
     const userDiv = document.createElement("div")
     userDiv.classList.add("column")
+    userDiv.classList.add("all-users")
     addUserBtn.addEventListener("click", () => {
         // Pour un user
         // Name of user
