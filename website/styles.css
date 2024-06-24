@@ -33,6 +33,9 @@ header {
     padding: 5px;
     margin: 5px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column  ;
 }
 
 .text {
@@ -62,4 +65,14 @@ header {
 main {
     display: flex;
     flex-direction: row;
+}
+
+.separator {
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 5px;
+    width: 100%;
+    background-color: rgb(19, 144, 211);
+    border-radius: 50px;
+    border: none;
 }

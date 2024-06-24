@@ -16,12 +16,15 @@ function addServer() {
     const nameInput = document.createElement("input")
     nameInput.type = "text"
     nameInput.id = "name-input-".concat(num)
+    nameInput.placeholder = "Server's name"
     divCase.appendChild(nameInput)
 
     // Le path du folder
     const localPathInput = document.createElement("input")
     localPathInput.type = "text"
     localPathInput.id = "path-input-".concat(num)
+    localPathInput.placeholder = "Local path"
+    divCase.appendChild(localPathInput)
     
     // Les users
     const separator = document.createElement("div")
@@ -35,6 +38,7 @@ function addServer() {
     const userDiv = document.createElement("div")
     userDiv.classList.add("column")
     userDiv.classList.add("all-users")
+    addUserBtn.textContent = "Add an user"
     addUserBtn.addEventListener("click", () => {
         // Pour un user
         // Name of user
@@ -57,6 +61,14 @@ function addServer() {
         readCheckBox.type = "checkbox"
         readCheckBox.checked = true
         currentUser.appendChild(readCheckBox)
+
+        const deleteUserBtn = document.createElement("button")
+        deleteUserBtn.type = "button"
+        deleteUserBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M5 20a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8h2V6h-4V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H3v2h2zM9 4h6v2H9zM8 8h9v12H7V8z"></path><path d="M9 10h2v8H9zm4 0h2v8h-2z"></path></svg>`
+        deleteUserBtn.addEventListener("click", () => {
+            
+        })
+        currentUser.appendChild(deleteUserBtn)
 
         userDiv.appendChild(currentUser)
     })
