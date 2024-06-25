@@ -90,5 +90,10 @@ function addServer() {
     main.insertBefore(divCase, addServerBtn.parentElement)
 }
 
+function parse() {
+    var data = ''
+    
+}
+
 
 addServerBtn.addEventListener("click", addServer)
