@@ -91,9 +91,47 @@ function addServer() {
     main.insertBefore(divCase, addServerBtn.parentElement)
 }
 
-function parse() {
-    var data = ''
+function parse(infos) {
+    
+}
 
+function getUser(userDiv) {
+    var user = {}
+    const allInputs = userDiv.querySelectorAll("input")
+    user.name = allInputs[0].value
+    user.write = allInputs[1].checked
+    user.read = allInputs[2].checked
+
+    return user
+}
+
+function getInfos() {
+    var allData = []
+
+    const allServs = document.querySelectorAll(".server")
+    for (const server of allServs) {
+        var data = {}
+        const currentNum = server.id.split("-")[1].toString()
+
+        // Name
+        const currentInputName = server.querySelector("#name-input-".concat(currentNum))
+        data.name = currentInputName.value
+
+        // Local path
+        const currentInputPath = server.querySelector("#path-input-".concat(currentNum))
+        data.path = currentInputPath.value
+
+        // Users
+        const usersDivs = server.querySelectorAll(".current-user-div")
+        data.users = []
+        for (const userDiv of usersDivs) {
+            data.users.push(getUser(userDiv))
+        }
+        allData.push(data)
+    }
+
+    console.log(JSON.stringify(allData))
+    return allData
 }
 
 
