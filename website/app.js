@@ -91,6 +91,10 @@ function addServer() {
     main.insertBefore(divCase, addServerBtn.parentElement)
 }
 
+function copyStr(str) {
+    navigator.clipboard.writeText(str)
+}
+
 function parse(infos) {
     
 }
