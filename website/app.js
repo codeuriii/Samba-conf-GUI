@@ -50,6 +50,7 @@ function addServer() {
         currentUser.className = "current-user-div row"
 
         const userName = document.createElement("input")
+        userName.placeholder = "User's name"
         currentUser.appendChild(userName)
 
         const writeCheckBox = document.createElement("input")

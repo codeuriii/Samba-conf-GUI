@@ -1,11 +1,14 @@
 
+* {
+    font-family: "Poppins", sans-serif;
+}
+
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -27,15 +30,22 @@ header {
     flex-direction: column;
 }
 
-.case {
+.add-server {
     width: 200px;
+}
+
+.server {
+    width: 250px;
+}
+
+.case {
     border: 5px solid rgb(19, 144, 211);
     padding: 5px;
     margin: 5px;
     border-radius: 10px;
     display: flex;
     align-items: center;
-    flex-direction: column  ;
+    flex-direction: column;
 }
 
 .text {
@@ -65,14 +75,27 @@ header {
 main {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .separator {
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
     height: 5px;
     width: 100%;
     background-color: rgb(19, 144, 211);
     border-radius: 50px;
     border: none;
+}
+
+.server input {
+    margin-bottom: 5px;
+}
+
+.server-btn {
+    margin: 5px;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.2);
 }
