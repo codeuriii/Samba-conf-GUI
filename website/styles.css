@@ -99,3 +99,12 @@ main {
 input[type="checkbox"] {
     transform: scale(1.2);
 }
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
