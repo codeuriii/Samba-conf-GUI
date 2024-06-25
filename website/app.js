@@ -7,7 +7,8 @@ const downloadConf = document.getElementById("download-conf")
 var i = 0
 
 function addServer() {
-    const num = (i + 1).toString()
+    i++
+    const num = i.toString()
     const divCase = document.createElement("div")
     divCase.classList.add("case")
     divCase.classList.add("server")
@@ -92,7 +93,7 @@ function addServer() {
 
 function parse() {
     var data = ''
-    
+
 }
 
 
