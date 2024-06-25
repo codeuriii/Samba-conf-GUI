@@ -96,7 +96,21 @@ function copyStr(str) {
 }
 
 function parse(infos) {
-    
+    infos = JSON.parse(infos)
+    var data = ''
+
+    for (const server of infos) {
+        data = data.concat("\n[")
+        data = data.concat(server.name)
+        data = data.concat("]\n   path = ")
+        data = data.concat(server.path)
+        data = data.concat("\n   valid users = ")
+        data = data.concat(server.users.filter(user => user.read).map(user => user.name).join(", "))
+        data = data.concat("\n   write list = ")
+        data = data.concat(server.users.filter(user => user.write).map(user => user.name).join(", "))
+    }
+
+    return data
 }
 
 function getUser(userDiv) {
@@ -106,7 +120,7 @@ function getUser(userDiv) {
     user.write = allInputs[1].checked
     user.read = allInputs[2].checked
 
-    return user
+    return JSON.stringify(user)
 }
 
 function getInfos() {
@@ -129,14 +143,20 @@ function getInfos() {
         const usersDivs = server.querySelectorAll(".current-user-div")
         data.users = []
         for (const userDiv of usersDivs) {
-            data.users.push(getUser(userDiv))
+            data.users.push(JSON.parse(getUser(userDiv)))
         }
         allData.push(data)
     }
 
-    console.log(JSON.stringify(allData))
-    return allData
+    return JSON.stringify(allData)
 }
 
 
 addServerBtn.addEventListener("click", addServer)
+copyConfBtn.addEventListener("click", () => {
+    copyStr(
+        parse(
+            getInfos()
+        )
+    )
+})
