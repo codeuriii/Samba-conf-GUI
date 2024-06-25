@@ -36,6 +36,7 @@ header {
 
 .server {
     width: 250px;
+    position: relative;
 }
 
 .case {
@@ -92,6 +93,10 @@ main {
     margin-bottom: 5px;
 }
 
+.server > input {
+    margin-right: 25px;
+}
+
 .server-btn {
     margin: 5px;
 }
@@ -107,4 +112,14 @@ footer {
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+.delete-serv {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+footer > button {
+    margin: 30px;
 }
